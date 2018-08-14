@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+#DH_VERBOSE = 1
+
+export PYBUILD_NAME=alabaster
+
+# main packaging script based on dh7 syntax
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+# To support python2.7 and python3, there are 2 ways to package:
+#   * packaging with --buildsystem=pybuild (jessie and later)
+#     https://wiki.debian.org/Python/Pybuild
+#     https://wiki.debian.org/Python/LibraryStyleGuide
+#
+#   * packaging without --buildsystem=pybuild (wheezy)
+#     https://wiki.debian.org/Python/AppStyleGuide
+#

@@ -1,0 +1,3 @@
+# Override this error as the Google Analytics is part of a layout template
+# that is only included when configured to do so.
+python3-alabaster: privacy-breach-google-adsense usr/lib/python3/dist-packages/alabaster/layout.html
